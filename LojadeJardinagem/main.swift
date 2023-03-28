@@ -63,11 +63,10 @@ repeat {
 
 func listarProdutos (){
     print("Listagem completa de produtos:")
-    print("-------------------------------------------------------------")
-    print("|             Nome             |            Preço           |")
-    print("-------------------------------------------------------------")
+    print("---------------------------------------------------------------")
+    print("|             Nome             |            Preço             |")
+    print("---------------------------------------------------------------")
     for (_, prod) in dict_prod {
-        print("-------------------------------------------------------------")
         var nome = (prod[0]).count
         var lenesquerda = (((31-nome)/2)-2)
         var lendireita = lenesquerda
@@ -76,14 +75,14 @@ func listarProdutos (){
         var espacodireita = String(repeating: " ", count: lendireita)
         
         var preco = (prod[2]).count
-        var lenesquerda2 = (((29-preco)/2)-2)
+        var lenesquerda2 = (((30-preco)/2)-2)
         var lendireita2 = lenesquerda2
         if (preco % 2 != 0) {lendireita2 = lendireita2 - 1}
         var espacoesquerda2 = String(repeating: " ", count: lenesquerda2)
         var espacodireita2 = String(repeating: " ", count: lendireita2)
         
         print("|",espacoesquerda, (prod[0]), espacodireita, "|", espacoesquerda2, (prod[2]), espacodireita2, "|")
-        print("-------------------------------------------------------------")
+        print("---------------------------------------------------------------")
     }
 }
 
